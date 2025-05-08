@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica-Regular !important;
+  background: rgb(243 244 246);
+}
+
+@font-face {
+  font-family: Helvetica-Bold;
+  src: url(./assets/font/Helvetica-Bold.ttf);
+}
+
+@font-face {
+  font-family: Helvetica-Regular;
+  src: url(./assets/font/Helvetica.ttf);
+}
+
+@font-face {
+  font-family: Helvetica-light;
+  src: url(./assets/font/helvetica-light-587ebe5a59211.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Helvetica-Bold;
+}
+
+p {
+  font-family: Helvetica-Regular;
+}
+
+span {
+  font-family: Helvetica-Regular !important;
+}
+
+button,
+a {
+  font-family: Helvetica-Regular;
+}
+
+.footer-link {
+  font-family: Helvetica-Regular;
+}
+
+.font-hel-bold {
+  font-family: Helvetica-Bold !important;
+}
+
+.navbar {
+  /* background: rgba(255, 255, 255, 0.02) !important; */
+  /* backdrop-filter: blur(27.5px) !important; */
+  margin-bottom: -200px;
+  z-index: 99999999;
+  background: #0C0C0C;
+  position: fixed !important;
+  top: 0px !important;
+  right: 0px !important;
+  left: 0px !important;
+
+}
+
+.header-sticky {
+  position: sticky !important;
+  top: 0px !important;
+  right: 0px !important;
+  left: 0px !important;
+}
+
+/* .change-color nav a {
+  color: black !important;
+} */
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: #77CFB8 !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: #77CFB8 !important;
+}
+
+.css-1hv8oq8-MuiStepLabel-label {
+  font-family: Helvetica-light;
+}
+ 
+@layer components {
+  .loaderContainer {
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999 !important;
+  }
+}
