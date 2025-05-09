@@ -1,9 +1,9 @@
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import profilePic from "../assets/images/unknownAvatar.png";
-import iconCards from "../assets/images/icon-2.webp"; 
-import { Link, useNavigate } from "react-router-dom"; 
+import iconCards from "../assets/images/icon-2.webp";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { backend_url, server } from "../server"; 
+import { backend_url, server } from "../server";
 import { toast } from "react-toastify";
 import ErrorModal from "../components/ErrorModal";
 import LoaderPage from "../components/Loader/LoaderPage";
@@ -39,11 +39,11 @@ function PersonalProfile() {
             error.response.status < 600) ||
           "Network Error"
         ) {
-          navigate("/something-wrong");
+          navigate("/");
         } else {
           if (
-            error?.message == "Network Error" ||
-            error?.data?.message == "500"
+            error?.message === "Network Error" ||
+            error?.data?.message === "500"
           ) {
             setErrorModalOpen(true);
           } else {
@@ -63,7 +63,7 @@ function PersonalProfile() {
     };
 
     fetchData();
-  }, []);
+  }, [navigate]);
 
   const closeModal = () => {
     setErrorModalOpen(false);

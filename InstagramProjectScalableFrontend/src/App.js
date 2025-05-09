@@ -1,23 +1,23 @@
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import PersonalProfile from "./pages/PersonalProfile";
 import EditProfile from "./pages/EditProfile";
 import axios from "axios";
 import { server } from "./server";
 import ScrollToTop from "./pages/ScrollToTop";
-import LoaderContext from "./components/LoaderContext.js/LoaderContext.js";
+// import LoaderContext from "./components/LoaderContext.js/LoaderContext.js";
 import WatchAndEnjoy from "./pages/WatchAndEnjoy";
 import './index.css';
 import UploadData from "./pages/UploadData.js";
 function App() {
   // const location = useLocation();
   const [IsAuthenticated, setIsAuthenticated] = useState(false);
-  const { isLoading, setIsLoading } = useContext(LoaderContext);
+  // const { isLoading, setIsLoading } = useContext(LoaderContext);
 
   useEffect(() => {
     const fetchUserAuthStatus = async () => {

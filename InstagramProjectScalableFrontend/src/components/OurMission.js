@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import MissionImg from "../assets/images/instalogo.png";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import MissionImg from "../assets/images/instalogo.png"; 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
