@@ -303,7 +303,7 @@ function EditProfile() {
                                 {...register("newPasswordConfirmation", {
                                   required: true,
                                   validate: (value) =>
-                                    value == newPassword ||
+                                    value === newPassword ||
                                     "Passwords do not match",
                                 })}
                                 className={`block w-full py-2 mt-2 text-gray-700 shadow-md  placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:ring-opacity-50 sm:text-sm sm:leading-6 outline-none px-2 rounded-md ${

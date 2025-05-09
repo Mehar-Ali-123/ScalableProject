@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Logo from "../assets/images/footer-logo-2.png";
+import React, { useState } from "react"; 
 import { Link, useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -62,7 +61,7 @@ function SignUp() {
         },
       });
 
-      if (response.status == 200 || 201) {
+      if (response.status === 200 || 201) {
         console.log("Sign Up successful");
 
         reset();
@@ -177,7 +176,7 @@ function SignUp() {
                 {...register("passwordConfirmation", {
                   required: true,
                   validate: (value) =>
-                    value == password || "Passwords do not match",
+                    value === password || "Passwords do not match",
                 })}
                 className={`block w-full py-2 mt-2 text-gray-700 shadow-md placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:ring-opacity-50 sm:text-sm sm:leading-6 outline-none px-2 rounded-md ${errors.passwordConfirmation ? "border-red-500" : ""
                   }`}

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import LogoMobile from "../assets/images/footer-logo-2.png";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"; 
 import Logo from "../assets/images/instalogo.png";
 import { Menu } from "@headlessui/react";
 import axios from "axios";
@@ -13,7 +12,6 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showLoginConfirmation, setShowLoginConfirmation] = useState(false);
-  const [shredNavigate, setShredNavigate] = useState(false);
   const isAuthenticated = localStorage.getItem("isAuthentication");
   console.log(isAuthenticated);
   const navigate = useNavigate();
@@ -39,7 +37,7 @@ export default function Header() {
       localStorage.setItem("authToken", "");
       localStorage.setItem("userName", "unknown");
       localStorage.setItem("userEmail", "unknown");
-      if (response.status == 200) {
+      if (response.status === 200) {
         navigate("/");
         setIsLoading(false);
       }
@@ -84,7 +82,7 @@ export default function Header() {
                     </Link>
 
                   </Menu>
-                  {isAuthenticated == "true" &&
+                  {isAuthenticated === "true" &&
                     <Link
                       to="/upload-data"
                       className="mr-5   text-2xl md:text-[18px]   text-center "
@@ -94,7 +92,7 @@ export default function Header() {
                       </span>
                     </Link>
                   }
-                  {isAuthenticated == "true" ? (
+                  {isAuthenticated === "true" ? (
                     <Menu className="relative" as="div">
                       <Link>
                         <Menu.Button className="mr-5   text-2xl md:text-[18px]   text-center text-white hover:text-primary   hover:underline font-hel-bold flex flex-row items-center gap-1">
@@ -372,7 +370,7 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="hover:bg-[#FBF4DB] p-2">
-                      {isAuthenticated == "true" ? (
+                      {isAuthenticated === "true" ? (
                         <Menu className="relative" as="div">
                           <Link
                             to="/personal-profile"

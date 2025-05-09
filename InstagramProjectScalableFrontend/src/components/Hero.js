@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import  { useState } from "react";
+import {useNavigate } from "react-router-dom";
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -7,7 +7,7 @@ export default function Hero() {
   const isAuthenticated = localStorage.getItem("isAuthentication");
 
   const handleStartShredding = () => {
-    if (isAuthenticated == "true") {
+    if (isAuthenticated === "true") {
       navigate("/watchandenjoy");
     } else {
       setShowLoginConfirmation(true);
