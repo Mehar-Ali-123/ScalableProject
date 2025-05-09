@@ -405,7 +405,7 @@ router.get("/get-users-data", isAuthenticated, async (req, res, next) => {
       "name email subscriptionType country avatar signupDate"
     );
 
-    if (!users || users.length === 0) {
+    if (!users || users.length == 0) {
       return res.status(404).json({
         success: false,
         error: "No users found",

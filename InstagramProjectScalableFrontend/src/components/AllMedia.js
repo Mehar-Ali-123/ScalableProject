@@ -14,8 +14,8 @@ const AllMedia = () => {
                     const allMedia = res.data.media;
 
                     // Separate images and videos
-                    const imagesArr = allMedia.filter(item => item.fileType === "image");
-                    const videosArr = allMedia.filter(item => item.fileType === "video");
+                    const imagesArr = allMedia.filter(item => item.fileType == "image");
+                    const videosArr = allMedia.filter(item => item.fileType == "video");
 
                     setImages(imagesArr);
                     setVideos(videosArr);

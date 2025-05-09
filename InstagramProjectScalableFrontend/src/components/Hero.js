@@ -7,7 +7,7 @@ export default function Hero() {
   const isAuthenticated = localStorage.getItem("isAuthentication");
 
   const handleStartShredding = () => {
-    if (isAuthenticated === "true") {
+    if (isAuthenticated == "true") {
       navigate("/watchandenjoy");
     } else {
       setShowLoginConfirmation(true);

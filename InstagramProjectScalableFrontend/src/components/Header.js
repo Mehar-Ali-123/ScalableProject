@@ -39,7 +39,7 @@ export default function Header() {
       localStorage.setItem("authToken", "");
       localStorage.setItem("userName", "unknown");
       localStorage.setItem("userEmail", "unknown");
-      if (response.status === 200) {
+      if (response.status == 200) {
         navigate("/");
         setIsLoading(false);
       }

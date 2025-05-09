@@ -17,8 +17,8 @@ export default function WatchAndEnjoy() {
           const allMedia = res.data.media;
 
           // Separate images and videos
-          const imagesArr = allMedia.filter(item => item.fileType === "image");
-          const videosArr = allMedia.filter(item => item.fileType === "video");
+          const imagesArr = allMedia.filter(item => item.fileType == "image");
+          const videosArr = allMedia.filter(item => item.fileType == "video");
 
           setImages(imagesArr);
           setVideos(videosArr);
@@ -75,7 +75,7 @@ export default function WatchAndEnjoy() {
               </>
             ) : (
               <div className="absolute inset-0 w-full h-full">
-                {typeof src === "string" && src.includes("youtube") ? (
+                {typeof src == "string" && src.includes("youtube") ? (
                   <iframe
                     className="w-full h-full"
                     src={`${backend_url}/${src}`}
@@ -173,7 +173,7 @@ export default function WatchAndEnjoy() {
           <ul className="flex list-none flex-row flex-wrap border-2 border-primary rounded-3xl w-auto overflow-hidden text-[9px] sm:text-[15px]">
             <li>
               <button
-                className={`block border-transparent px-2 md:px-7 p-3 font-medium leading-tight ${activeTab === "Videos" ? "border-primary bg-primary text-white" : "text-neutral-500 dark:text-white/50"}`}
+                className={`block border-transparent px-2 md:px-7 p-3 font-medium leading-tight ${activeTab == "Videos" ? "border-primary bg-primary text-white" : "text-neutral-500 dark:text-white/50"}`}
                 onClick={() => setActiveTab("Videos")}
               >
                 Videos
@@ -181,7 +181,7 @@ export default function WatchAndEnjoy() {
             </li>
             <li>
               <button
-                className={`block border-transparent px-2 md:px-7 p-3 font-medium leading-tight ${activeTab === "Pictures" ? "border-primary bg-primary text-white" : "text-neutral-500 dark:text-white/50"}`}
+                className={`block border-transparent px-2 md:px-7 p-3 font-medium leading-tight ${activeTab == "Pictures" ? "border-primary bg-primary text-white" : "text-neutral-500 dark:text-white/50"}`}
                 onClick={() => setActiveTab("Pictures")}
               >
                 Pictures
@@ -191,7 +191,7 @@ export default function WatchAndEnjoy() {
         </div>
 
         <div className="mb-6">
-          <div className={`${activeTab === "Videos" ? "block opacity-100" : "hidden opacity-0"} transition-opacity duration-150 ease-linear`}>
+          <div className={`${activeTab == "Videos" ? "block opacity-100" : "hidden opacity-0"} transition-opacity duration-150 ease-linear`}>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
               {videos.map((video, index) => (
                 <VideoCard
@@ -205,7 +205,7 @@ export default function WatchAndEnjoy() {
             </div>
           </div>
 
-          <div className={`${activeTab === "Pictures" ? "block opacity-100" : "hidden opacity-0"} transition-opacity duration-150 ease-linear`}>
+          <div className={`${activeTab == "Pictures" ? "block opacity-100" : "hidden opacity-0"} transition-opacity duration-150 ease-linear`}>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
               {images.map((pic, index) => (
                 <PictureCard

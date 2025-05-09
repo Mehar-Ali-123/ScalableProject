@@ -177,7 +177,7 @@ function ForgetPass() {
                     {...register("confirmPassword", {
                       required: "Confirm Password is required",
                       validate: (value) =>
-                        value === watch("newPassword") ||
+                        value == watch("newPassword") ||
                         "Passwords do not match",
                     })}
                     className={`block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:ring-opacity-50 text-sm sm:leading-6 outline-none px-2  ${errors.confirmPassword ? "border-red-500" : ""

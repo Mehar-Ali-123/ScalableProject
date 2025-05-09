@@ -23,7 +23,7 @@ function SignIn() {
 
       const { token } = response?.data;
       const { user } = response?.data;
-      if (response.status === 200 || response.status === 201) {
+      if (response.status == 200 || response.status == 201) {
         if (!user.isVerified) {
           toast.error(" Verify your email to continue !", {
             autoClose: 3000,

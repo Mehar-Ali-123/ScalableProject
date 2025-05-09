@@ -12,7 +12,7 @@ const UploadData = () => {
 
     const handleChange = (e) => {
         const { name, value, files } = e.target;
-        if (name === 'file') {
+        if (name == 'file') {
             setForm({ ...form, file: files[0] });
         } else {
             setForm({ ...form, [name]: value });
@@ -46,7 +46,7 @@ const UploadData = () => {
                 },
             });
 
-            if (res.status === 201) {
+            if (res.status == 201) {
                 alert('Upload successful!');
                 setForm({
                     title: '',
