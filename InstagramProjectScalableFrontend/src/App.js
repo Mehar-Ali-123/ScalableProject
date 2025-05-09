@@ -1,10 +1,10 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import PersonalProfile from "./pages/PersonalProfile";
 import EditProfile from "./pages/EditProfile";
 import axios from "axios";
@@ -16,9 +16,8 @@ import './index.css';
 import UploadData from "./pages/UploadData.js";
 function App() {
   // const location = useLocation();
-  const [IsAuthenticated, setIsAuthenticated] = useState(false);
-  // const { isLoading, setIsLoading } = useContext(LoaderContext);
-
+  // const [IsAuthenticated, setIsAuthenticated] = useState(false);
+  // const { isLoading, setIsLoading } = useContext(LoaderContext); 
   useEffect(() => {
     const fetchUserAuthStatus = async () => {
       try {
@@ -33,11 +32,11 @@ function App() {
           },
         });
         if (response.data.isAuthenticated) {
-          setIsAuthenticated(true);
+          // setIsAuthenticated(true);
           localStorage.setItem("isAuthentication", true);
           console.log("User is authenticated");
         } else {
-          setIsAuthenticated(false);
+          // setIsAuthenticated(false);
           localStorage.setItem("isAuthentication", false);
           localStorage.setItem("userName", "unknown");
           localStorage.setItem("userEmail", "unknown");
